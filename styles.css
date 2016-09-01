@@ -1,0 +1,81 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+body {
+  font-family: Montserrat;
+}
+a {
+  text-decoration: none;
+  color: #30809b;
+}
+
+.canvas {
+  position: relative;
+  z-index: 1;
+  border: 1px solid #eee;
+}
+
+.generator-container {
+  margin-bottom: 125px;
+}
+
+#bottom {
+  position:fixed;
+  left:0px;
+  bottom:0px;
+  height:125px;
+  width:100%;
+  overflow-y: scroll;
+  background:#FFF;
+  z-index: 100;
+}
+
+.navbar-studio {
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  height: 40px;
+}
+.navbar-right {
+  list-style-type: none;
+  float: right;
+}
+.navbar-brand {
+  float: left;
+  margin: 10px 5px;
+  font-weight: bold;
+}
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+li {
+  display: inline;
+}
+
+.button {
+  display: inline-block;
+  padding: 5px 0 5px 0;
+  text-align: center;
+  margin-right: 5px;
+  height: 20px;
+  max-height: 50px;
+  min-width: 100px;
+  background: #348AA7;
+  border: none;
+  outline: none;
+  color: white;
+  font-family: inherit;
+  font-size: 15px;
+  border-radius: 3px;
+  box-shadow: 0 5px 0px #348aa7;
+  border-bottom: 2px solid #30809b;
+}
+.button:hover {
+  background: #2e7a94;
+  box-shadow: 0 4px 1px #2e7a94;
+  border-bottom: 2px solid #2a7088;
+  transition: all 0.1s ease-in;
+}
+.button:active {
+  transform: translateY(4px);
+  border-bottom-width: 2px;
+  box-shadow: none;
+}
