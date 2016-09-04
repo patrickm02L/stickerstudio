@@ -6,7 +6,7 @@ $(function() {
   var maxWidth = 700;
   var maxHeight = 700;
   // What filetype are we getting in /images/ ?
-  var fileType = 'png';
+  var fileType = 'svg';
 
   // When the user uploads an image, displays it in the canvas
   $('#file').on('change', function(e) {
@@ -76,7 +76,7 @@ $(function() {
 
 
   // Build out the list of sprites
-  var sprites = 10; // Number of sprites in the /images folder
+  var sprites = 8; // Number of sprites in the /images folder
   for (i = 1; i <= sprites; i++) {
     $('#sprites').append("<img src='images/"+i+"."+ fileType +"' class='sprite' data-id='"+i+"'>");
   }

@@ -79,3 +79,8 @@ li {
   border-bottom-width: 2px;
   box-shadow: none;
 }
+
+.sprite {
+  max-height: 100px;
+  max-width: 100px;
+}
