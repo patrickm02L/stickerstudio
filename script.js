@@ -3,9 +3,9 @@ $(function() {
   var canvas = new fabric.Canvas('c');
 
   // Set some boundries on what the user can put in the canvas, because it resizes
-  var maxWidth = 1600;
-  var maxHeight = 1000;
-  // What filetype are we getting in /images-2/ ?
+  var maxWidth = 700;
+  var maxHeight = 700;
+  // What filetype are we getting in /images/ ?
   var fileType = 'svg';
 
   // When the user uploads an image, displays it in the canvas
@@ -19,10 +19,12 @@ $(function() {
         var width = (img.width > maxWidth) ? maxWidth : img.width;
         var height = (img.height > maxWidth) ? maxHeight : img.height;
 
-        var oImg = img.set({top: 0,
+        var oImg = img.set({
+          top: 0,
           left: 0,
           height: height,
-          width: width});
+          width: width
+        });
 
         // Changing the size of the canvas based on the image.
         canvas.setWidth(height);
@@ -34,7 +36,9 @@ $(function() {
 
         canvas.add(oImg).renderAll();
         var a = canvas.setActiveObject(oImg);
-        var dataURL = canvas.toDataURL({format: 'svg'});
+        var dataURL = canvas.toDataURL({
+          format: 'png',
+        });
       });
     };
     reader.readAsDataURL(file);
@@ -54,7 +58,7 @@ $(function() {
   downloadButton.on('click', function(e) {
     canvas.discardActiveObject();
     canvas.renderAll();
-    var image = canvas.toDataURL("image/svg").replace("image/svg", "image/octet-stream");
+    var image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
     $('.save').attr({
       'download': 'CityStickerStudio.png',  /// set filename
       'href'    : image              /// set data-uri
