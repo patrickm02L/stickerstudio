@@ -3,10 +3,10 @@ $(function() {
   var canvas = new fabric.Canvas('c');
 
   // Set some boundries on what the user can put in the canvas, because it resizes
-  var maxWidth = 700;
-  var maxHeight = 700;
-  // What filetype are we getting in /images/ ?
-  var fileType = 'png';
+  var maxWidth = 1600;
+  var maxHeight = 1000;
+  // What filetype are we getting in /images-2/ ?
+  var fileType = 'svg';
 
   // When the user uploads an image, displays it in the canvas
   $('#file').on('change', function(e) {
@@ -34,7 +34,7 @@ $(function() {
 
         canvas.add(oImg).renderAll();
         var a = canvas.setActiveObject(oImg);
-        var dataURL = canvas.toDataURL({format: 'png'});
+        var dataURL = canvas.toDataURL({format: 'svg'});
       });
     };
     reader.readAsDataURL(file);
@@ -54,9 +54,9 @@ $(function() {
   downloadButton.on('click', function(e) {
     canvas.discardActiveObject();
     canvas.renderAll();
-    var image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+    var image = canvas.toDataURL("image/svg").replace("image/svg", "image/octet-stream");
     $('.save').attr({
-      'download': 'saved.png',  /// set filename
+      'download': 'CityStickerStudio.png',  /// set filename
       'href'    : image              /// set data-uri
     });
   });
@@ -66,17 +66,17 @@ $(function() {
     var id = $(this).attr('data-id');
     var file = 'images/' + id + '.'+fileType;
     fabric.Image.fromURL(file, function (img) {
-      var oImg = img.set({left: 0, top: 0, angle: 00,width:img.width, height:img.height});
+      var oImg = img.set({left: 30, top: 60, angle: 00,width:img.width, height:img.height});
       oImg.hasBorder = false;
       canvas.add(oImg).renderAll();
       var a = canvas.setActiveObject(oImg);
-      var dataURL = canvas.toDataURL({format: 'png', quality: 1});
+      var dataURL = canvas.toDataURL({format: 'svg', quality: 1});
     });
   });
 
 
   // Build out the list of sprites
-  var sprites = 10; // Number of sprites in the /images folder
+  var sprites = 8; // Number of sprites in the /images-2 folder
   for (i = 1; i <= sprites; i++) {
     $('#sprites').append("<img src='images/"+i+"."+ fileType +"' class='sprite' data-id='"+i+"'>");
   }
