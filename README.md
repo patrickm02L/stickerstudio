@@ -1,4 +1,5 @@
-# Furret
-![Furret](http://cdn.bulbagarden.net/upload/thumb/4/4b/162Furret.png/500px-162Furret.png)
+# City Sticker Studio
 
-Furret takes user uploaded photos and allows you to apply sprites to it, and then save 💖
+City Sticker Studio allows users to upload maps and apply urban design sprites to them, and then save!
+
+Inspired by [@keithk](https://github.com/keithk) brilliant [Furret](https://github.com/keithk/Furret) app!
