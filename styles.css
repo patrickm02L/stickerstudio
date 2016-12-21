@@ -2,19 +2,10 @@
 body {
   font-family: 'Open Sans', sans-serif;
 }
+
 a {
   text-decoration: none;
   color: #185682;
-}
-
-.canvas {
-  position: relative;
-  z-index: 1;
-  border: 1px solid #eee;
-}
-
-.generator-container {
-  margin-top: 20px;
 }
 
 #bottom {
@@ -27,30 +18,6 @@ a {
   background:#FFF;
   z-index: 100;
   border-top: 1px solid #d1d1d1;
-}
-
-.navbar-studio {
-  background-color: #fff;
-  border-bottom: 1px solid #d1d1d1;
-  height: 70px;
-}
-.navbar-right {
-  list-style-type: none;
-  float: right;
-}
-.navbar-brand {
-  float: left;
-  margin: 10px 5px;
-  font-weight: bold;
-  font-size: 30px
-}
-
-ul {
-  margin: 0px;
-  padding: 0px;
-}
-li {
-  display: inline;
 }
 
 .button {
