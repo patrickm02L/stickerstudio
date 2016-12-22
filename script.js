@@ -39,7 +39,7 @@ $(function() {
         canvas.add(oImg).renderAll();
         var a = canvas.setActiveObject(oImg);
         var dataURL = canvas.toDataURL({
-          format: 'png',
+          format: 'png'
         });
       });
     };
