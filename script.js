@@ -8,6 +8,8 @@ $(function() {
   // What filetype are we getting in /images/ ?
   var fileType = 'svg';
 
+// IMAGES
+
   // When the user uploads an image, displays it in the canvas
   $('#file').on('change', function(e) {
     var file = e.target.files[0];
@@ -51,7 +53,7 @@ $(function() {
      }
   });
 
-
+// BUTTONS
 
   // The download button - when you click it, it applies the value of the canvas into an image.
   var downloadButton = $('#btn-download');
@@ -64,6 +66,9 @@ $(function() {
       'href'    : image              /// set data-uri
     });
   });
+
+
+// SPRITES
 
   // Clicking on a sprite applies it to the canvas
   $('#sprites').on('click', '.sprite', function() {
@@ -78,10 +83,10 @@ $(function() {
     });
   });
 
-
   // Build out the list of sprites
-  var sprites = 8; // Number of sprites in the /images-2 folder
+  var sprites = 8; // Number of sprites in the /images folder
   for (i = 1; i <= sprites; i++) {
     $('#sprites').append("<img src='images/"+i+"."+ fileType +"' class='sprite' data-id='"+i+"'>");
   }
+
 });
